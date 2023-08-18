@@ -1,3 +1,22 @@
 {
-  "settingsInheritedFrom": "svg-GHC-2/whitesource-config@master"
+  "settingsInheritedFrom": "svg-GHC-2/whitesource-config@master",
+  "scanSettings": {
+    "configMode": "AUTO",
+    "configExternalURL": "",
+    "baseBranches": ["main"],
+    "enableLicenseViolations": true
+  },
+  "checkRunSettings": {
+    "vulnerableCheckRunConclusionLevel": "failure",
+    "displayMode": "diff"
+  },
+  "issueSettings": {
+    "minSeverityLevel": "LOW",
+    "issueType": "DEPENDENCY"
+  },
+  "remediateSettings": {
+    "workflowRules": {
+      "enabled": true
+    }
+  }
 }
