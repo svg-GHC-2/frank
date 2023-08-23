@@ -17,7 +17,41 @@
   "remediateSettings": {
     "workflowRules": {
       "enabled": true
-    }
-  },
-  "hostRules": []
+    },
+    "enableRenovate": true,
+    "transitiveRemediation": "true",
+    "extends": [
+      ":dependencyDashboard",
+      "github>whitesource/merge-confidence:beta",
+      ":ignoreModulesAndTests",
+      "group:monorepos",
+      "group:recommended",
+      "replacements:all",
+      "workarounds:all"
+    ],
+    "prConcurrentLimit": 0,
+    "prHourlyLimit": 5,
+    "commitMessagePrefix": "renovate: ",
+    "ignoreDeps": ["node","react","react-dom","d3","@mswjs/interceptors"],
+    "packageRules": [
+      {
+        "matchUpdateTypes": ["major"],
+        "automerge": true
+      },
+      {
+        "matchUpdateTypes": ["minor", "patch", "pin"],
+        "automerge": false
+      },
+      {
+        "description": "Bump patch babel dependency updates once a month",
+        "matchPackageNames": ["@babel"],
+        "matchUpdateTypes": ["patch"],
+        "extends": ["schedule:weekly"],
+        "automerge": true
+      }
+    ],
+    "timezone": "America/Chicago",
+    "schedule": ["after 8am every weekday", "before 5pm every weekday"],
+    "automergeSchedule": ["after 8am every weekday","before 5pm every weekday"]
+  }
 }
