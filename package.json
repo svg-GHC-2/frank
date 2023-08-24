@@ -19,7 +19,7 @@
   "dependencies": {
     "@angular/core": "^16.0.0",
     "@babel/cli": "^7.19.3",
-    "@babel/types": "7.1.1",
+    "@babel/types": "7.22.11",
     "axios": "0.1.0",
     "bootstrap": "4.1.0"
   }
