@@ -17,6 +17,18 @@
     "workflowRules": {
       "enabled": true
     },
-    "enableRenovate": true
+    "enableRenovate": true,
+    "extends": ["config:base"],
+    "packageRules": [
+      {
+        "enabled": false,
+        "matchPackageNames": [
+          "@types/node"
+        ],
+        "matchUpdateTypes": [
+          "major"
+        ]
+      }
+    ]
   }
 }
