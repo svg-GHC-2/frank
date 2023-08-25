@@ -19,13 +19,8 @@
     },
     "enableRenovate": true,
     "extends": ["config:base"],
-    "packageRules": [
-      {
-        "enabled": false,
-        "matchUpdateTypes": [
-          "minor"
-        ]
-      }
-    ]
+    "major": {
+      "enabled": false
+    }    
   }
 }
