@@ -23,7 +23,7 @@
       {
         "enabled": false,
         "matchUpdateTypes": [
-          "patch"
+          "major"
         ]
       }
     ]
