@@ -22,11 +22,8 @@
     "packageRules": [
       {
         "enabled": false,
-        "matchPackageNames": [
-          "@types/node"
-        ],
         "matchUpdateTypes": [
-          "major"
+          "patch"
         ]
       }
     ]
