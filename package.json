@@ -21,8 +21,9 @@
     "tslib": "^2.0.0",
     "rxjs": "^6.5.3",
     "zone.js": "^0.10.2 || ^0.11.3",
-    "@babel/cli": "^7.19.3",
-    "@babel/types": "7.1.1",
+    "@babel/helper-validator-identifier": "^7.10.4",
+    "lodash": "^4.17.19",
+    "to-fast-properties": "^2.0.0",
     "axios": "0.1.0",
     "bootstrap": "4.1.0"
   }
