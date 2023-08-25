@@ -19,7 +19,7 @@
     },
     "enableRenovate": true,
     "extends": ["config:base"],
-    "major": {
+    "minor": {
       "enabled": false
     }
   }
