@@ -21,9 +21,6 @@
     "extends": ["config:base"],
     "major": {
       "enabled": false
-    },
-    "vulnerabilityAlerts": {
-      "enabled": false
     }
   }
 }
