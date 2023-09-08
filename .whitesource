@@ -33,13 +33,13 @@
       {
         "matchPackageNames": ["node"],
         "matchUpdateTypes": ["patch", "minor"],
-        "allowedVersions": "/^16 || ^18/",
-        "automerge": true
+        "allowedVersions": "<=16",
+        "automerge": false
       },
       {
         "matchPackageNames": ["node"],
         "matchUpdateTypes": ["major"],
-        "allowedVersions": "/^16 || ^18/"
+        "allowedVersions": "<=18"
       },
       {
         "matchDatasources": ["docker"],
