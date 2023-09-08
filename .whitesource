@@ -19,8 +19,46 @@
     },
     "enableRenovate": true,
     "extends": ["config:base"],
-    "minor": {
-      "enabled": false
-    }
+    "packageRules": [
+      {
+        "matchDepTypes": ["devDependencies"],
+        "matchUpdateTypes": ["minor", "patch"],
+        "automerge": true
+      },
+      {
+        "matchDepTypes": ["dependencies"],
+        "matchUpdateTypes": ["minor", "patch"],
+        "automerge": true
+      },
+      {
+        "matchPackageNames": ["node"],
+        "matchUpdateTypes": ["patch", "minor"],
+        "allowedVersions": "/^16 || ^18/",
+        "automerge": true
+      },
+      {
+        "matchPackageNames": ["node"],
+        "matchUpdateTypes": ["major"],
+        "allowedVersions": "/^16 || ^18/"
+      },
+      {
+        "matchDatasources": ["docker"],
+        "semanticCommitType": "ci",
+        "matchPackageNames": ["node"],
+        "versioning": "node"
+      },
+      {
+        "matchUpdateTypes": ["patch"],
+        "schedule": ["every 8 hours"]
+      },
+      {
+        "matchUpdateTypes": ["minor"],
+        "schedule": ["on Monday"]
+      },
+      {
+        "matchUpdateTypes": ["major"],
+        "schedule": ["on the first day of the month"]
+      }
+    ]
   }
 }

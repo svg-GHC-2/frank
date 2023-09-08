@@ -26,5 +26,8 @@
     "to-fast-properties": "2.0.0",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2 || ^0.11.3"
+  },
+  "engines": {
+    "node": ">16.x"
   }
 }
