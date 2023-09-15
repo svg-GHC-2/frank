@@ -1,4 +1,5 @@
 {
+  "settingsInheritedFrom": "svg-GHC-2/whitesource-config@master",
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
