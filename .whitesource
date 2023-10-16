@@ -28,7 +28,7 @@
       },
       {
         "matchDepTypes": ["dependencies"],
-        "matchUpdateTypes": ["minor", "patch"],
+        "matchUpdateTypes": ["major","minor", "patch"],
         "automerge": true
       },
       {
