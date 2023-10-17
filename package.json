@@ -19,7 +19,7 @@
   "dependencies": {
     "@angular/core": "11.2.14",
     "@babel/helper-validator-identifier": "^7.10.4",
-    "axios": "0.1.0",
+    "axios": "0.21.1",
     "bootstrap": "4.6.2",
     "lodash": "4.17.15",
     "to-fast-properties": "2.0.0",
