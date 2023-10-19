@@ -21,7 +21,7 @@
     "@babel/helper-validator-identifier": "^7.10.4",
     "axios": "0.1.0",
     "bootstrap": "4.6.2",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "to-fast-properties": "2.0.0",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2 || ^0.11.3 || ^0.13.0 || ^0.14.0"
