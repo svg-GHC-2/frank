@@ -3,7 +3,7 @@
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
-    "baseBranches": ["main"],
+    "baseBranches": ["main", "develop"],
     "enableLicenseViolations": true
   },
   "checkRunSettings": {
