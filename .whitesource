@@ -3,7 +3,10 @@
   "scanSettings": {
     "configMode": "AUTO",
     "configExternalURL": "",
-    "baseBranches": ["main", "develop"],
+    "baseBranches": [
+      "main",
+      "develop"
+    ],
     "enableLicenseViolations": true
   },
   "checkRunSettings": {
@@ -15,51 +18,74 @@
     "issueType": "DEPENDENCY"
   },
   "remediateSettings": {
+    "baseBranches": [
+      "develop"
+    ],
     "workflowRules": {
       "enabled": true
     },
     "enableRenovate": true,
-    "extends": ["config:base"],
+    "extends": [
+      ":dependencyDashboard",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":autodetectPinVersions",
+      ":prConcurrentLimit20",
+      ":prHourlyLimitNone",
+      ":automergeTypes",
+      "group:monorepos",
+      "group:recommended",
+      "workarounds:all",
+      "github>whitesource/merge-confidence:beta"
+    ],
+    "ignorePaths": [
+      "**/node_modules/**",
+      "**/bower_components/**",
+      "**/vendor/**",
+      "**/examples/**",
+      "**/__fixtures__/**"
+    ],
+    "transitiveRemediation": true,
     "packageRules": [
       {
-        "matchDepTypes": ["devDependencies"],
-        "matchUpdateTypes": ["minor", "patch"],
+        "matchUpdateTypes": [
+          "digest"
+        ],
+        "matchConfidence": [
+          "very high",
+          "high",
+          "Neutral"
+        ],
         "automerge": true
       },
       {
-        "matchDepTypes": ["dependencies"],
-        "matchUpdateTypes": ["major","minor", "patch"],
+        "matchUpdateTypes": [
+          "patch",
+          "pin",
+          "minor"
+        ],
         "automerge": true
       },
       {
-        "matchPackageNames": ["node"],
-        "matchUpdateTypes": ["patch", "minor"],
-        "allowedVersions": "<=16",
-        "automerge": false
+        "matchDepTypes": [
+          "devDependencies"
+        ],
+        "automerge": true
       },
       {
-        "matchPackageNames": ["node"],
-        "matchUpdateTypes": ["major"],
-        "allowedVersions": "<=18"
+        "matchManagers": [
+          "npm"
+        ],
+        "rangeStrategy": "pin"
       },
       {
-        "matchDatasources": ["docker"],
-        "semanticCommitType": "ci",
-        "matchPackageNames": ["node"],
-        "versioning": "node"
-      },
-      {
-        "matchUpdateTypes": ["patch"],
-        "schedule": ["every 8 hours"]
-      },
-      {
-        "matchUpdateTypes": ["minor"],
-        "schedule": ["on Monday"]
-      },
-      {
-        "matchUpdateTypes": ["major"],
-        "schedule": ["on the first day of the month"]
+        "matchConfidence": [
+          "low"
+        ],
+        "dependencyDashboardApproval": true
       }
-    ]
+    ],
+    "major": {
+      "dependencyDashboardApproval": true
+    }
   }
 }
