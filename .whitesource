@@ -19,7 +19,7 @@
   },
   "remediateSettings": {
     "baseBranches": [
-      "develop"
+      "main"
     ],
     "workflowRules": {
       "enabled": true
