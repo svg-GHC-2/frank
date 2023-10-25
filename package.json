@@ -17,19 +17,6 @@
   },
   "homepage": "https://github.com/svg-GHC-2/frank#readme",
   "dependencies": {
-    "@apidevtools/swagger-parser": "10.1.0",
-    "@babel/helper-validator-identifier": "^7.10.4",
-    "@apollo/client": "3.8.6",
-    "axios": "0.1.0",
-    "react": "18.2.25",
-    "react-beautiful-dnd": "13.1.1",
-    "react-dom": "18.2.11",
-    "react-error-boundary": "4.0.11",
-    "react-hook-form": "7.47.0",
-    "react-json-tree": "0.18.0",
-    "react-oidc-context": "2.3.1",
-    "react-query": "3.39.3",
-    "react-router-dom": "6.17.0",
-    "sass": "1.69.0"
+    "axios": "0.1.0"
   }
 }
