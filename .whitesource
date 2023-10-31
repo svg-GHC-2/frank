@@ -26,17 +26,6 @@
     },
     "enableRenovate": true,
     "extends": [
-      // ":dependencyDashboard",
-      // ":approveMajorUpdates",
-      // ":semanticPrefixFixDepsChoreOthers",
-      // ":autodetectPinVersions",
-      // ":prConcurrentLimit20",
-      // ":prHourlyLimitNone",
-      // ":automergeTypes",
-      // "group:monorepos",
-      // "group:recommended",
-      // "workarounds:all",
-      // "github>whitesource/merge-confidence:beta"
       ":dependencyDashboard"
       ":approveMajorUpdates"
       ":semanticPrefixFixDepsChoreOthers"
