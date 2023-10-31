@@ -26,15 +26,15 @@
     },
     "enableRenovate": true,
     "extends": [
-      ":dependencyDashboard"
-      ":approveMajorUpdates"
-      ":semanticPrefixFixDepsChoreOthers"
-      ":prConcurrentLimit20"
-      ":prHourlyLimitNone"
-      ":automergeTypes"
-      "group:monorepos"
-      "group:recommended"
-      "workarounds:all"
+      ":dependencyDashboard",
+      ":approveMajorUpdates",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":prConcurrentLimit20",
+      ":prHourlyLimitNone",
+      ":automergeTypes",
+      "group:monorepos",
+      "group:recommended",
+      "workarounds:all",
       "github>whitesource/merge-confidence:beta"
     ],
     "ignorePaths": [
