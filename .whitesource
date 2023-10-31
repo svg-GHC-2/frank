@@ -26,16 +26,26 @@
     },
     "enableRenovate": true,
     "extends": [
-      ":dependencyDashboard",
-      ":approveMajorUpdates",
-      ":semanticPrefixFixDepsChoreOthers",
-      ":autodetectPinVersions",
-      ":prConcurrentLimit20",
-      ":prHourlyLimitNone",
-      ":automergeTypes",
-      "group:monorepos",
-      "group:recommended",
-      "workarounds:all",
+      // ":dependencyDashboard",
+      // ":approveMajorUpdates",
+      // ":semanticPrefixFixDepsChoreOthers",
+      // ":autodetectPinVersions",
+      // ":prConcurrentLimit20",
+      // ":prHourlyLimitNone",
+      // ":automergeTypes",
+      // "group:monorepos",
+      // "group:recommended",
+      // "workarounds:all",
+      // "github>whitesource/merge-confidence:beta"
+      ":dependencyDashboard"
+      ":approveMajorUpdates"
+      ":semanticPrefixFixDepsChoreOthers"
+      ":prConcurrentLimit20"
+      ":prHourlyLimitNone"
+      ":automergeTypes"
+      "group:monorepos"
+      "group:recommended"
+      "workarounds:all"
       "github>whitesource/merge-confidence:beta"
     ],
     "ignorePaths": [
@@ -83,6 +93,16 @@
           "low"
         ],
         "dependencyDashboardApproval": true
+      }
+    ],
+    "hostRules": [
+      {
+        "hostType": "docker",
+        "matchHost": "hub.docker.com",
+        "username": "svgshark",
+        "encrypted": {
+          "token": "wcBMA8xOaBJvzJNbAQf/bJYLfO+xN1zbwHablES/pXsEZ5T2oVJy1wWCcUjEmTPl0hsnn0Q9s4SOCwq8TPJrDrnuI+MpY2pEIn9tavH9qMPDdOVCCm7HO4TWPP34LHDPXH355cJXO+MD3rSmPpNQwE1vFygi4FXJGc/+v1lxoJZR7Bgy8Bf7x5E+d6mQn5cIeE71LLtliwtxyoDJOb/nfdzDRwNGW8sdh6oGrlzBkcfp4+hCrsG9t0pj7EsezcQY0Dl3eraSwyJoc8lF7o9vD8xxTnrHOxeALw+O3E2aZhba+shAOsnj0nx/ScnuUdSh0oFc96Lz75vFctcMcZwxvxJe2KdN3mU9xbWIQ++n/dJ0ATq7/qCt4HqU4VkFU4LRYDyOwbt/cTjjQScHVmApBpwJ2fvbMPU32MaRHFfA+vSpIIkdQOZq3IO5nWQ4FgIfM+8JtcpP9LNAec2HO1SPAy/18ml2kKc9vdiI/JKnB5MaMKftmytzkYsVovvfIGN+o2TJmOA"
+        }
       }
     ]
   }
