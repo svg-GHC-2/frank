@@ -58,17 +58,6 @@
       },
       {
         "matchUpdateTypes": [
-          "digest"
-        ],
-        "matchConfidence": [
-          "very high",
-          "high",
-          "Neutral"
-        ],
-        "automerge": true
-      },
-      {
-        "matchUpdateTypes": [
           "patch",
           "pin",
           "minor"
