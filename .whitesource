@@ -27,6 +27,7 @@
     "enableRenovate": true,
     "extends": [
       ":dependencyDashboard",
+      ":approveMajorUpdates"
       ":semanticPrefixFixDepsChoreOthers",
       ":autodetectPinVersions",
       ":prConcurrentLimit20",
@@ -83,9 +84,6 @@
         ],
         "dependencyDashboardApproval": true
       }
-    ],
-    "major": {
-      "dependencyDashboardApproval": true
-    }
+    ]
   }
 }
