@@ -25,6 +25,7 @@
       "enabled": true
     },
     "enableRenovate": true,
+    "timezone": "America/New_York",
     "extends": [
       ":dependencyDashboard",
       ":approveMajorUpdates",
@@ -35,8 +36,7 @@
       "group:monorepos",
       "group:recommended",
       "workarounds:all",
-      "github>whitesource/merge-confidence:beta",
-      "docker:disable"
+      "github>whitesource/merge-confidence:beta"
     ],
     "ignorePaths": [
       "**/node_modules/**",
@@ -47,6 +47,15 @@
     ],
     "transitiveRemediation": true,
     "packageRules": [
+      {
+        "matchDataSources": [
+          "Docker"
+        ],
+        "schedule": [
+          "after 10pm",
+          "before 5:00am"
+        ]
+      },
       {
         "matchUpdateTypes": [
           "digest"
