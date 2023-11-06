@@ -36,7 +36,8 @@
       "group:monorepos",
       "group:recommended",
       "workarounds:all",
-      "github>whitesource/merge-confidence:beta"
+      "github>whitesource/merge-confidence:beta",
+      "docker:disable"
     ],
     "ignorePaths": [
       "**/node_modules/**",
@@ -55,6 +56,17 @@
           "after 10pm",
           "before 5:00am"
         ]
+      },
+      {
+        "matchUpdateTypes": [
+          "digest"
+        ],
+        "matchConfidence": [
+          "very high",
+          "high",
+          "Neutral"
+        ],
+        "automerge": true
       },
       {
         "matchUpdateTypes": [
