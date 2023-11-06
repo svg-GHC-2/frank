@@ -28,24 +28,7 @@
     "enableRenovate": true,
     "timezone": "America/New_York",
     "extends": [
-      ":dependencyDashboard",
-      ":approveMajorUpdates",
-      ":semanticPrefixFixDepsChoreOthers",
-      ":prConcurrentLimit20",
-      ":prHourlyLimitNone",
-      ":automergeTypes",
-      "group:monorepos",
-      "group:recommended",
-      "workarounds:all",
-      "github>whitesource/merge-confidence:beta",
-      "docker:disable"
-    ],
-    "ignorePaths": [
-      "**/node_modules/**",
-      "**/bower_components/**",
-      "**/vendor/**",
-      "**/examples/**",
-      "**/__fixtures__/**"
+      ":dependencyDashboard"
     ],
     "transitiveRemediation": true,
     "packageRules": [
@@ -67,7 +50,7 @@
           "high",
           "Neutral"
         ],
-        "automerge": true
+        "automerge": false
       },
       {
         "matchUpdateTypes": [
@@ -75,19 +58,13 @@
           "pin",
           "minor"
         ],
-        "automerge": true
+        "automerge": false
       },
       {
         "matchDepTypes": [
           "devDependencies"
         ],
-        "automerge": true
-      },
-      {
-        "matchManagers": [
-          "npm"
-        ],
-        "rangeStrategy": "pin"
+        "automerge": false
       },
       {
         "matchConfidence": [
