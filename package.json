@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/svg-GHC-2/frank#readme",
   "dependencies": {
-    "@angular/core": "11.0.7",
+    "@angular/core": "11.1.1",
     "@babel/helper-validator-identifier": "^7.10.4",
     "axios": "0.1.0",
     "bootstrap": "4.1.0",
